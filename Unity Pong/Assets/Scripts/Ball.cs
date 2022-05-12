@@ -13,7 +13,7 @@ public class Ball : MonoBehaviour
 
     private void Start()
     {
-        ResetPosition();
+        RestartBall();
     }
 
     private void AddStartingForce()
@@ -33,7 +33,11 @@ public class Ball : MonoBehaviour
     {
         ballRigidBody2D.position = Vector3.zero;
         ballRigidBody2D.velocity = Vector3.zero;
+    }
 
+    public void RestartBall()
+    {
+        ResetPosition();
         AddStartingForce();
     }
 }
